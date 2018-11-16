@@ -1,0 +1,13 @@
+.gallery {
+    &__image {
+        @include media-breakpoint-up(sm) {
+            display: flex;
+            height: 200px;     
+            margin-bottom: 1rem;   
+        }
+
+        @include media-breakpoint-up(xl) {
+            height: 250px;
+        }
+    }
+}

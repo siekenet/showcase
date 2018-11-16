@@ -1,0 +1,21 @@
+.svg-icon {
+    height: 2em;
+    width: 2em;
+
+    @include media-breakpoint-up(md) {
+        height: 3em;
+        width: 3em;
+    }
+}
+
+.heart-icon {
+    fill: red;
+}
+
+.compass-icon {
+    fill: indigo;
+}
+
+.lock-icon {
+    fill: darkgreen;
+}

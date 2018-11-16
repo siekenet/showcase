@@ -1,0 +1,59 @@
+.form-control:not(textarea) {
+    border-radius: 30px;
+}
+
+.input-group-text {
+    padding: 0.375rem 0.5rem 0.375rem 1rem;
+    border-radius: 30px;
+
+    .svg-icon {
+        width: 17px;
+        height: 17px;
+    }
+}
+
+.info {
+    &__icon {
+        float: left;
+        margin-top: 5px;
+        margin-right: .5em;
+    }
+
+    &__description {
+        overflow: hidden;
+    }
+
+    .svg-icon {
+        width: 2em;
+        height: 2em;
+        fill: white;
+    }
+}
+
+.contact {
+    position: relative;
+    color: white;
+    background-image: url('../images/contact2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+        background: rgba(0,0,0,.8);
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .contact-form {
+        color: black;
+    }
+}

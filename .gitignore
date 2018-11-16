@@ -1,0 +1,7 @@
+node_modules/
+package-lock.json
+assets/js/script.js
+assets/js/script.js.map
+assets/css/style.css
+assets/css/style.css.map
+assets/images/RAW/*

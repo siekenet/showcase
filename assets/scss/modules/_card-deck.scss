@@ -1,0 +1,9 @@
+.card-deck {
+    @include media-breakpoint-only(sm) {
+        flex-flow: column;
+
+        .card {
+            margin-bottom: 15px;
+        }
+    }
+}

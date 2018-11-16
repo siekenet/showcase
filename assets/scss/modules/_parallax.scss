@@ -1,0 +1,34 @@
+.parallax {
+    position: relative;
+    padding: 15rem 0 15rem;
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-content {
+
+}
+
+.slogan {
+    color: white;
+
+    .parallax-content {
+        padding: 3rem 0;
+        background: rgba(0,0,0,.7);
+    }
+}
+
+#slogan1 {
+    background-image: url('../images/parallax1.jpg');
+}
+
+#slogan2 {
+    background-image: url('../images/parallax2.jpg');
+}
+
+#slogan3 {
+    background-image: url('../images/parallax3.jpg');
+}
