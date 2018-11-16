@@ -53,7 +53,19 @@
         z-index: 1;
     }
 
-    .contact-form {
-        color: black;
+    .card {
+        background: transparent;
+        border: 0;
+    }
+
+    .card-header {
+        background-color: inherit;
+        border-bottom: 0;
+    }
+
+    .card-body {
+        @include media-breakpoint-down(sm) {
+            padding: 0;
+        }
     }
 }

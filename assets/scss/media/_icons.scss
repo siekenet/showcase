@@ -1,6 +1,10 @@
 .svg-icon {
-    height: 2em;
+    display: inline-block;
     width: 2em;
+    height: 2em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
 
     @include media-breakpoint-up(md) {
         height: 3em;

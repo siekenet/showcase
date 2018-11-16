@@ -1,0 +1,11 @@
+@mixin parallax-image($url, $file-extension: 'jpg') {
+    background-image: url('#{$url}-sm.#{$file-extension}');
+
+    @include media-breakpoint-up(sm) {
+        background-image: url('#{$url}-md.#{$file-extension}');
+    }
+
+    @include media-breakpoint-up(md) {
+        background-image: url('#{$url}.#{$file-extension}');
+    }
+}
