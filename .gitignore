@@ -1,3 +1,13 @@
+<<<<<<< HEAD
 node_modules
 CNAME
 
+=======
+node_modules/
+package-lock.json
+assets/js/script.js
+assets/js/script.js.map
+assets/css/style.css
+assets/css/style.css.map
+assets/images/RAW/*
+>>>>>>> 7944cecb2f1615ee1fd56d912fe24fbe1ba56220

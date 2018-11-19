@@ -1,0 +1,16 @@
+.carousel {
+    max-height: 80vh;
+    overflow: hidden;
+}
+
+.carousel-inner,
+.carousel-item {
+    max-height: 80vh;
+}
+
+.carousel-caption {
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    background: rgba(0,0,0,.7);
+}

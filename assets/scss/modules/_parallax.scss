@@ -1,0 +1,38 @@
+.parallax {
+    position: relative;
+    padding: 5rem 0 5rem;
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include media-breakpoint-up(sm) {
+        padding: 10rem 0 10rem;
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: 15rem 0 15rem;
+    }
+}
+
+.slogan {
+    color: white;
+
+    .parallax-content {
+        padding: 3rem 0;
+        background: rgba(0,0,0,.7);
+    }
+}
+
+#slogan1 {
+    @include parallax-image('../images/parallax1');
+}
+
+#slogan2 {
+    @include parallax-image('../images/parallax2');
+}
+
+#slogan3 {
+    @include parallax-image('../images/parallax4');
+}
