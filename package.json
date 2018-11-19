@@ -1,0 +1,14 @@
+{
+  "name": "siekenet",
+  "version": "1.0.0",
+  "description": "SIEKE-NET showcase on Github",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oliver Sieke",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
