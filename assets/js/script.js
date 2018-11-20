@@ -1,57 +1,3 @@
-"use strict";
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-!function (a, b) {
-  "function" == typeof define && define.amd ? define([], function () {
-    return a.svg4everybody = b();
-  }) : "object" == (typeof module === "undefined" ? "undefined" : _typeof(module)) && module.exports ? module.exports = b() : a.svg4everybody = b();
-}(undefined, function () {
-  function a(a, b, c) {
-    if (c) {
-      var d = document.createDocumentFragment(),
-          e = !b.hasAttribute("viewBox") && c.getAttribute("viewBox");e && b.setAttribute("viewBox", e);for (var f = c.cloneNode(!0); f.childNodes.length;) {
-        d.appendChild(f.firstChild);
-      }a.appendChild(d);
-    }
-  }function b(b) {
-    b.onreadystatechange = function () {
-      if (4 === b.readyState) {
-        var c = b._cachedDocument;c || (c = b._cachedDocument = document.implementation.createHTMLDocument(""), c.body.innerHTML = b.responseText, b._cachedTarget = {}), b._embeds.splice(0).map(function (d) {
-          var e = b._cachedTarget[d.id];e || (e = b._cachedTarget[d.id] = c.getElementById(d.id)), a(d.parent, d.svg, e);
-        });
-      }
-    }, b.onreadystatechange();
-  }function c(c) {
-    function e() {
-      for (var c = 0; c < o.length;) {
-        var h = o[c],
-            i = h.parentNode,
-            j = d(i),
-            k = h.getAttribute("xlink:href") || h.getAttribute("href");if (!k && g.attributeName && (k = h.getAttribute(g.attributeName)), j && k) {
-          if (f) if (!g.validate || g.validate(k, j, h)) {
-            i.removeChild(h);var l = k.split("#"),
-                q = l.shift(),
-                r = l.join("#");if (q.length) {
-              var s = m[q];s || (s = m[q] = new XMLHttpRequest(), s.open("GET", q), s.send(), s._embeds = []), s._embeds.push({ parent: i, svg: j, id: r }), b(s);
-            } else a(i, j, document.getElementById(r));
-          } else ++c, ++p;
-        } else ++c;
-      }(!o.length || o.length - p > 0) && n(e, 67);
-    }var f,
-        g = Object(c),
-        h = /\bTrident\/[567]\b|\bMSIE (?:9|10)\.0\b/,
-        i = /\bAppleWebKit\/(\d+)\b/,
-        j = /\bEdge\/12\.(\d+)\b/,
-        k = /\bEdge\/.(\d+)\b/,
-        l = window.top !== window.self;f = "polyfill" in g ? g.polyfill : h.test(navigator.userAgent) || (navigator.userAgent.match(j) || [])[1] < 10547 || (navigator.userAgent.match(i) || [])[1] < 537 || k.test(navigator.userAgent) && l;var m = {},
-        n = window.requestAnimationFrame || setTimeout,
-        o = document.getElementsByTagName("use"),
-        p = 0;f && e();
-  }function d(a) {
-    for (var b = a; "svg" !== b.nodeName.toLowerCase() && (b = b.parentNode);) {}return b;
-  }return c;
-});
 'use strict';
 
 (function ($) {
@@ -62,11 +8,64 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 })(jQuery);
 'use strict';
 
+(function () {
+    function initMap(id, lattitude, longitude, popupText) {
+        // check if id exists
+        if (!document.getElementById(id)) {
+            return;
+        }
+
+        // set up the map
+        var map = new L.Map(id);
+
+        // create the tile layer with correct attribution
+        var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var osmAttrib = 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors';
+        var osm = new L.TileLayer(osmUrl, {
+            maxZoom: 18,
+            minZoom: 10,
+            attribution: osmAttrib
+        });
+
+        // start the map
+        map.setView(new L.LatLng(lattitude, longitude), 16);
+        map.addLayer(osm);
+
+        // add the marker with the appropriate text
+        var marker = L.marker([lattitude, longitude]).addTo(map);
+        marker.bindPopup(popupText).openPopup();
+    }
+
+    initMap('map', 52.51814, 10.0130413, 'Ramlinger Str. 43A');
+})();
+'use strict';
+
+var _paq = _paq || [];
+/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function () {
+    var u = "//sieke-net.com/z_analytics/pw/";
+    _paq.push(['setTrackerUrl', u + 'piwik.php']);
+    _paq.push(['setSiteId', '28']);
+    var d = document,
+        g = d.createElement('script'),
+        s = d.getElementsByTagName('script')[0];
+    g.type = 'text/javascript';
+    g.async = true;
+    g.defer = true;
+    g.src = u + 'piwik.js';
+    s.parentNode.insertBefore(g, s);
+})();
+'use strict';
+
 (function ($) {
-    ScrollReveal().reveal('.site-content section:not(.parallax) > *');
-    ScrollReveal().reveal('footer > *', {
-        delay: 0
-    });
+    try {
+        ScrollReveal().reveal('.site-content section:not(.parallax) > *');
+        ScrollReveal().reveal('footer > *', {
+            delay: 0
+        });
+    } catch (error) {}
 })(jQuery);
 'use strict';
 
