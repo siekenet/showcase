@@ -1,0 +1,14 @@
+html,
+body,
+.site {
+    height: 100%;
+}
+
+.site {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-content {
+    flex: 1 0 auto;
+}

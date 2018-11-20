@@ -48,6 +48,17 @@
         background: rgba(0,0,0,.8);
     }
 
+    a {
+        color: inherit;
+        border-bottom: 2px solid theme-color('primary');
+
+        &:hover,
+        &:focus {
+            border-bottom: 4px solid theme-color('primary');
+            text-decoration: none;
+        }
+    }
+
     .container {
         position: relative;
         z-index: 1;
@@ -66,6 +77,12 @@
     .card-body {
         @include media-breakpoint-down(sm) {
             padding: 0;
+        }
+    }
+
+    textarea.form-control {
+        @include media-breakpoint-up(lg) {
+            height: 394px;
         }
     }
 }

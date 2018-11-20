@@ -1,0 +1,28 @@
+.full-text {
+    p {
+        line-height: 1.67;
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+        letter-spacing: .005em;
+    }
+
+    address,
+    blockquote,
+    dl,
+    p,
+    ul,
+    ol,
+    figure {
+        max-width: 30rem;
+        margin: 0 auto 2rem;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        max-width: 50rem;
+        margin: 3rem auto 2rem;
+    }
+}

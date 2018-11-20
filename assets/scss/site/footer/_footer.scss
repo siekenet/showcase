@@ -2,4 +2,21 @@
     padding: 1.25rem 0 3rem;
     font-size: .875rem;
     text-align: center;
+    background: #f7f7f7;
+}
+
+.site-info {
+    span {
+        display: block;
+        
+        @include media-breakpoint-up(md) {
+                display: inline;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .sep {
+            display: none;
+        }
+    }
 }

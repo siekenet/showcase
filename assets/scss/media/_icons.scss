@@ -12,8 +12,9 @@
     }
 }
 
-.heart-icon {
-    fill: red;
+.handshake-icon,
+.bullet-icon {
+    fill: theme-color('primary');
 }
 
 .compass-icon {

@@ -7,3 +7,24 @@
         margin-right: -.5rem;
     }
 }
+
+.navbar-brand {
+    text-transform: uppercase;
+
+    span {
+        padding: .3rem .7rem;
+        border: 1px solid rgba($white, .5);
+        border-radius: 3px;
+    }
+
+    &:hover,
+    &:focus {
+        span {
+            border-color: rgba($white, .75);
+        }
+    }
+}
+
+.navbar {
+    font-family: $font__body;
+}
